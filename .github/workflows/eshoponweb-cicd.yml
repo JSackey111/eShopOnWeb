@@ -1,14 +1,17 @@
 name: eShopOnWeb Build and Test
 
-#Triggers (uncomment line below to use it)
-on: workflow_dispatch
-#Environment variables https://docs.github.com/en/actions/learn-github-actions/environment-variables
+# Triggers (manual execution)
+on: 
+  workflow_dispatch
+
+# Environment variables
 env:
-  RESOURCE-GROUP: rg-eshoponweb-az400
+  RESOURCE_GROUP: rg-eshoponweb-az400
   LOCATION: southafricanorth
-  TEMPLATE-FILE: infra/webapp.bicep
-  SUBSCRIPTION-ID: 0b7fdc77-cda6-4311-acec-510330ff18f2
-  WEBAPP-NAME: devops-webapp-az400
+  TEMPLATE_FILE: infra/webapp.bicep
+  SUBSCRIPTION_ID: 0b7fdc77-cda6-4311-acec-510330ff18f2
+  WEBAPP_NAME: devops-webapp-az400
+
 
 jobs:
   #Build, test and publish .net web project in repository
